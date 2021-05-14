@@ -58,7 +58,7 @@ In case of failure:
 <table class="tableizer-table">
 <thead><tr class="tableizer-firstrow"><th>PARAMETER</th><th>VALUE</th><th>MANDATORY</th><th>DEFAULT</th></tr></thead><tbody>
  <tr><td>number</td><td>Recipient number</td><td>Yes</td><td>-</td></tr>
- <tr><td>admin</td><td>Number of BulkGate administrator receiving notification.</td><td>Yes</td><td>-</td></tr>
+ <tr><td>admin</td><td>Number of BulkGate administrator receiving notification.</td><td>No</td><td>-</td></tr>
  <tr><td>text</td><td>Text of the SMS message (max. 612 characters, or 268 characters, if Unicode is activated), UTF-8 encoding. It is possible to add variables to the template from the variables array (another parameter) Hello <first_name> <last_name> ....</td><td>Yes</td><td>Blank SMS</td></tr>
  <tr><td>sender_id</td><td>Sender ID, see Sender ID type</td><td>No</td><td>gSystem</td></tr>
  <tr><td>sender_id_value</td><td>Sender value gOwn , gText , gMobile , or gPush (if gMobile , or gPush used, please supply mobile connect key as sender_id_value )</td><td>No</td><td>null</td></tr>
