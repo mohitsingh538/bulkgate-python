@@ -24,8 +24,8 @@ To create API:
 ```bash
 git clone https://github.com/ohlc-ai/bulkgate-python.git
 ```
-<br>
 
+# Usage
 For sending `Transactional SMS`:
 ```bash
 from python_bulkgate import send_transactional
