@@ -44,13 +44,17 @@ send_transactional(app_id, app_token, sms_data)
 <h4>Response to this command would be:</h4>
 <br>
 In case of success:
+
 ```bash
 {"status": "accepted", "sms_id": "tmpde1bcd4b1d1"}
 ```
+
 In case of failure:
+
 ```bash
 {"status": "failure", "error_code": 400, "reason": "Invalid phone number"}
 ```
+
 <h5>Parameters for sms_data dictionary:</h5>
 <table class="tableizer-table">
 <thead><tr class="tableizer-firstrow"><th>PARAMETER</th><th>VALUE</th><th>MANDATORY</th><th>DEFAULT</th></tr></thead><tbody>
@@ -65,6 +69,7 @@ In case of failure:
 <br>
 
 For `sending` OTP:
+
 ```bash
 from python_bulkgate import send_otp
 
@@ -79,15 +84,19 @@ send_otp(app_id, app_token, sms_data)
 <h4>Response to this command would be:</h4>
 <br>
 In case of success:
+
 ```bash
 {"status": "success", "otp_id": "opt-609d984a32c336.12662723"}
 ```
+
 In case of failure:
+
 ```bash
 {"status": "failure", "error_code": 400, "reason": "Unknown identity"}
 ```
 
 <h5>Parameters for sms_data dictionary:</h5>
+
 <table class="tableizer-table">
 <thead><tr class="tableizer-firstrow"><th>PARAMETER</th><th>VALUE</th><th>MANDATORY</th><th>DEFAULT</th></tr></thead><tbody>
  <tr><td>number</td><td>Phone number to which send the verification code</td><td>Yes</td><td>-</td></tr>
@@ -98,6 +107,7 @@ In case of failure:
  <tr><td>limit</td><td>The number of requests per minute for request_quota_identification</td><td>No</td><td>1</td></tr>
  <tr><td>identifier</td><td>Identification of the "OTP user / requester" to whom the request_quota_number quota per minute will apply. We recommend using an IP address for this identification.</td><td>Yes</td><td>127.0.0.1</td></tr>
 </tbody></table>
+
 <br>
 <br>
 
@@ -113,16 +123,22 @@ send_otp(app_id, app_token, otp_id, user_otp)
 ```
 
 <h4>Response to this command would be:</h4>
+
 <br>
+
 In case of success:
+
 ```bash
 True  # if OTP is Verified
 False   # if OTP is incorrect or expired
 ```
+
 In case of failure:
+
 ```bash
 {"status": "failure", "code": 400, "reason": "Unknown identity"}
 ```
+
 <br>
 <br>
 
@@ -138,12 +154,17 @@ resend_otp(app_id, app_token, otp_id)   #OTP ID of recently sent OTP to user
 ```
 
 <h4>Response to this command would be:</h4>
+
 <br>
+
 In case of success:
+
 ```bash
 {"status": "success", "otp-id": "opt-609d984a32c336.12662723"}
 ```
+
 In case of failure:
+
 ```bash
 {"status": "failure", "code": 400, "reason": "Unknown identity"}
 ```
