@@ -2,7 +2,7 @@
 
 <br>
 <br>
-<img src="https://portal.bulkgate.com//images/white-label/bulkgate/logo/logo.svg" width="60%"><small>&nbsp;&nbsp;&nbsp;<b>(Unofficial)</b></small>
+<img src="https://portal.bulkgate.com//images/white-label/bulkgate/logo/logo.svg" width="35%"><small>&nbsp;&nbsp;&nbsp;<b>(Unofficial)</small>
 
 
 
