@@ -35,7 +35,6 @@ app_token = 'YOUR APP TOKEN'
 
 sms_data = {'number': 9999999999, 
             'text': f"Hello {first_name}! This is a test msg.",
-            "admin_id": 123   # Your admin ID
            }   # See Parameters below for adding custom params
 
 send_transactional(app_id, app_token, sms_data)

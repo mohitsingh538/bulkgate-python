@@ -10,6 +10,7 @@ if __name__ == '__main__':
 
     def send_transactional(app_id, app_token, sms_data):
         BULK_GATE_TRN_URL = "/api/1.0/advanced/transactional"
+
         country = sms_data['country'] if 'country' in sms_data else "in"
         text = sms_data['text'] if 'text' in sms_data else "Blank Text"
         sender_id = sms_data['sender_id'] if 'sender_id' in sms_data else "gSystem"
@@ -18,7 +19,6 @@ if __name__ == '__main__':
         body = {
                     "application_id": app_id,
                     "application_token": app_token,
-                    "admin": sms_data['admin_id'],
                     "number": f"{sms_data['number']}",
                     "unicode": True,
                     "flash": False,
@@ -45,6 +45,7 @@ if __name__ == '__main__':
 
     def send_otp(app_id, app_token, sms_data):
         OTP_SEND_URL = "/api/1.0/otp/send"
+
         country = sms_data['country'] if 'country' in sms_data else "in"
         language = sms_data['language'] if 'language' in sms_data else "en"
         code_type = sms_data['code_type'] if 'code_type' in sms_data else "int"
@@ -85,6 +86,7 @@ if __name__ == '__main__':
 
     def verify_otp(app_id, app_token, otp_id, user_otp):
         OTP_VERIFY_URL = '/api/1.0/otp/verify'
+
         body = {
             "application_id": app_id,
             "application_token": app_token,
@@ -110,6 +112,7 @@ if __name__ == '__main__':
 
     def resend_otp(app_id, app_token, otp_id):
         OTP_RESEND_URL = '/api/1.0/otp/resend'
+
         body = {
             "application_id": app_id,
             "application_token": app_token,
